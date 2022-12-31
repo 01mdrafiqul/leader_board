@@ -113,7 +113,8 @@ hr:hover {
     text-decoration: none;
 }
 .courses {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 .course img {
     width: 240px;
@@ -178,4 +179,117 @@ hr:hover {
     font-weight: 600;
     font-size: 14px;
     color: #FF4A60;
+}
+/* ......................
+        For mobile       
+   ......................      */
+@media only screen and (max-width: 320px) {
+    header {
+        width: 320px;
+        height: 64px;
+        font-size: 16px;
+    }
+    .logo img {
+        width: 25px;
+        height: 30px;
+        left: 12px;
+        top: 17px;
+    }
+    .navbar h3 {
+        margin-left: 42px;
+    }
+    .navbar li a {
+        font-size: 12px;
+        padding-right: 10px;
+    }
+    .profile img {
+        width: 31px;
+        height: 31px;
+        left: 279px;
+        top: 16.5px;
+    } 
+    .container {
+        width: 276px;
+        margin: 10px;
+        padding: 12px;
+    } 
+    .players, .blogs, .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player img {
+        padding-bottom: 0;
+    }
+    .player {
+        align-items: center;
+        flex-direction: column;
+    }
+    hr {
+        width: 276px;
+    }
+    .blog img {
+        width: 240px;
+        height: 120px;
+        padding-left: 18px;
+        padding-bottom: 5px;
+    }
+    .blog, .courses {
+        display: block;
+    }
+    .author, .course-author{
+        font-size: 12px;
+    }
+}
+/* .....................
+      FOR TABLET     
+   .....................       */
+@media only screen and (min-width:321px) and (max-width:768px) {
+    header {
+        width: 768px;
+    }
+    .logo img {
+        left: 60px;
+    }
+    .navbar h3 {
+        margin-left: 110px;
+    }
+    .navbar ul {
+        margin-right: 100px;
+    }
+    .profile img {
+        left: 631.5px;
+    } 
+    .container {
+        width: 575px;
+        margin: 30px 60px;
+        padding: 15px 24px;
+    } 
+    .players, .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .player h3, .blog h3,.course {
+        font-size: 18px;
+        padding-left: 20px;
+    }
+    .player {
+        margin-left: 30px;
+    }
+    hr {
+        width: 600px;
+    }
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blog {
+        display: flex;
+    }
+    .blog img {
+        width: 240px;
+        height: 120px;
+        padding-left: 30px;
+        padding-bottom: 30px;
+    }
+    .author, .course-author{
+        margin-top: 0px;
+        font-size: 12px;
+    }
 }
